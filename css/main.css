@@ -88,7 +88,8 @@ input { text-align: center;
 				list-style: none;
 			}				
 .on-the-list ul { margin:0;
-				  padding:0;}
+				  padding:0;
+				  list-style: none;}
 
 
 .tick { color:green;
@@ -102,8 +103,10 @@ input { text-align: center;
 		} 
 
 
-.total  {  text-align: right;
+.total  {  text-align: center;
+			margin:0 auto;
 			font-size:3em;
+			padding: 1em;
 			 font-family: arial;}				
 
 

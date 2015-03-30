@@ -1,11 +1,62 @@
+
+
+/*Check on List and  Prompt them for the price*/
+
+$(document).ready(function() {
+
+
+
+});
+	
+
+
+
+
+var price= 0;
+var total=0;
+	
+
+
+$(document).on("click", ".checkButton", function(){
+	
+    	   
+    $(this).parent().removeClass( "cross" ).addClass( "tick");
+	price= parseInt(prompt('what price?'));
+	$(this).parent().append( '  ' +  '£' + price);
+
+	total += price;
+	
+	console.log(total);
+	$('.total').text('Total Cost £:'+ total);
+	return total;
+
+	
+});
+
+
+
+
+
+/*Remove item from list */
+
+$(document).on('click', '.removeButton', function(){
+	$(this).parent().remove();
+});
+
+/*Un check from list */
+
+$(document).on('click','.uncheckButton', function() {
+	$(this).parent().removeClass('tick').addClass('cross');
+}) 
+
+
 $(document).ready(function() {
 
 // Add Item to List ///
-var price=0;
 
 
-	$( "input" )
-	  .keydown(function(e) {
+
+	$( "input" ).keydown(function(e) {
 
 		    var itemName = $( this ).val();
 		    var checkButton= "<span class= 'checkButton'><i class='fa fa-check-circle'></i> </span>"
@@ -14,36 +65,18 @@ var price=0;
 		    
 		    if (e.keyCode == 13) {
 
-		     		 $(".on-the-list ul").append('<li>' + itemName +' '+ checkButton + uncheckButton  + removeButton + '</li>')
+		     		 $(".on-the-list ul").append('<li>' + itemName + ' '+ checkButton + uncheckButton  + removeButton + '</li>')
 		     	   	 $('input').val("");
 
-		 	}	
-
-		 	
-		  	$(".removeButton").click(function(){
-			$(this).parent().remove();
-		 	})
-
-
-
-		 	$(".uncheckButton").click(function() {
-		   	$(this).parent().addClass('cross');
-		   	})
-
-
-		 	$(".checkButton").click(function() {
-		 	$(this).parent().addClass('tick'); 
-		 	})
-
-
-				
-		 	
-
-	});
-
-
-
-
+		 	}			 	
+	})
 
 });
 
+
+
+
+      /*  console.log("I am going to add a strikethrough");
+        $(this).closest('p').addClass("strikethrough");
+        $(this).siblings('.delete').addClass("alt-delete");
+        $(this).addClass("alt-cross-off");*/
