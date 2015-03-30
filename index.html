@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" media="all" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font awesome/4.3.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font awesome/4.3.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	
@@ -16,15 +16,19 @@
 </head>
 <body>
 <header>
+
 		<h2> Shopping List</h2>
 
 </header>
 
 <div class="input-wrapper"> 
 
-	<h2>add item, type below and hit 'enter'</h2>
+	<h3>Add an item and hit 'enter'</h3>
 
 	<input type="text" value=" ">
+	<div>
+		<p class='total'></p>
+	</div>
 
 
 </div>
@@ -45,8 +49,15 @@
 		</div>
 	
 		<br>
+	
 		<div>
-		<p class='total'></p>
+			<ul class='instructions'>
+				<li><span class= 'checkButton'><i class='fa fa-check-circle'></i> </span><p>Check if item is in store</p></li>
+				<li> <span class='uncheckButton'><i class='fa fa-times-circle'></i></span><p>Un-check if item is not in store</p></li>
+				<li> <span class='removeButton'> <i class='fa fa-minus-circle'></i></span><p>Remove item from the list</p></li>
+			</ul>
+		   
+		  
 		</div>
    </div>
 </section>

@@ -47,16 +47,27 @@ header p h2 { margin-top: 1em;
 
 .input-wrapper, .main-wrapper { background-color: rgba(0,0,3,0.1); }
 
-.input-wrapper { 	text-align: center;
+.input-wrapper { 	
+
 			font-size: 3em;
 			margin: 0 auto;
+			text-align: center;
 			width:90%;}
 
-.input-wrapper h2 {margin:0;}
+
+.total  {  text-align: center;
+			margin:0 auto;
+			font-size:1em;
+			padding: 0em;
+			 font-family: arial;}	
+
+.input-wrapper h2 {margin:0;
+					font-size: 2em;}
 
 input { text-align: center;
 		background-color: rgba(0,2,3,0.1);
-		margin: 0;}			
+		margin: 0;
+		}			
 
 
 /************ Table *******************/ 
@@ -98,14 +109,21 @@ input { text-align: center;
 		font-size: 1em;
 		margin:0 auto;
 		} 
+			
 
 
-.total  {  text-align: center;
-			margin:0 auto;
-			font-size:3em;
-			padding: 1em;
-			 font-family: arial;}				
+/* *************instructions ****************/
 
+.instructions  {  list-style: none;
+				  display: inline-block;
+				  text-align: center;
+				  margin:0 auto;
+				  font-size: 2.5em;
+				  color: grey;
+	
+}
+.instructions li p { display: inline-block;
+						margin-left: 1em;}
 
 /************ Footer ***********/
 

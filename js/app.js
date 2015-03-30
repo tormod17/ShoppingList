@@ -19,15 +19,28 @@ $(document).on("click", ".checkButton", function(){
 	
     	   
     $(this).parent().removeClass( "cross" ).addClass( "tick");
-	price= parseInt(prompt('what price?'));
+		
+		price= parseInt(prompt('what price?'));
+		
+		while ( isNaN(price)) {
+			
+			price= parseInt(prompt('Please enter a number in £s?'))
+		
+		};
+
+		
+
 	$(this).parent().append( '  ' +  '£' + price);
+		
 
 	total += price;
-	
+			
 	console.log(total);
 	$('.total').text('Total Cost £:'+ total);
 	return total;
 
+
+	
 	
 });
 
@@ -39,6 +52,7 @@ $(document).on("click", ".checkButton", function(){
 
 $(document).on('click', '.removeButton', function(){
 	$(this).parent().remove();
+	
 });
 
 /*Un check from list */
@@ -63,7 +77,7 @@ $(document).ready(function() {
 		    
 		    if (e.keyCode == 13) {
 
-		     		 $(".on-the-list ul").append('<li>' + itemName + ' '+ checkButton + uncheckButton  + removeButton + '</li>')
+		     		 $(".on-the-list ul").prepend('<li>' + itemName + ' '+ checkButton + uncheckButton  + removeButton + '</li>')
 		     	   	 $('input').val("");
 
 		 	}			 	
