@@ -1,5 +1,4 @@
 
-
 body { 
 
  background-image: url(http://i1378.photobucket.com/albums/ah112/Tormod_Smith/notePad_zpsw60k6o4s.jpg);
@@ -16,8 +15,6 @@ body {
 
 /* background-image: url(file://C:/Users/Tormod/Documents/Thinkful/ShoppingList/img/notePad.jpg);
 background-image: no-repeat;
-
-
 } */
 }
 
@@ -29,6 +26,8 @@ html {
 
  
 }
+
+h4 { font-size: 4em;}
 
 /************Header **********************/
 
@@ -46,66 +45,65 @@ header p h2 { margin-top: 1em;
 
 /****************Input **********************/
 
-.input, .main-wrapper { background-color: rgba(0,0,3,0.1); }
+.input-wrapper, .main-wrapper { background-color: rgba(0,0,3,0.1); }
 
-.input { 	text-align: center;
+.input-wrapper { 	text-align: center;
 			font-size: 3em;
 			margin: 0 auto;
 			width:90%;}
+
+.input-wrapper h2 {margin:0;}
+
+input { text-align: center;
+		background-color: rgba(0,2,3,0.1);
+		margin: 0;}			
 
 
 /************ Table *******************/ 
 
 .main-wrapper { width:90%;
 				margin:0 auto;
-				
-			}
-
-.main-wrapper h4 { margin-top: 1em;
-				  font-size: 4em;
-			}
-
-table { margin:0 auto;
-		padding:0;
-
-
-		}		
-
-table tr { 	line-height: 2em;}		
-
-thead tr h4  {
-				
 				text-align: center;
-				text-decoration: underline;
-				margin: 1em auto;}	
+				
+			}
+
+.main-wrapper  h4 { text-align: center;
+					text-decoration: underline;
+					margin: 0 auto;
+					}
+
+.main-wrapper p { text-align: center;
+					margin: 0 auto;}
 
 						
 
 .on-the-list  { font-size: 5em;
-			    margin:2em auto;}		
+				text-align: center;
+				margin:0 auto;
+				display: inline-block;
+				position: relative;
+				list-style: none;
+			}				
+.on-the-list ul { margin:0;
+				  padding:0;
+				  list-style: none;}
 
-tr.on-the-list td p  { margin:0 ;
-						margin-right: 1em; }			
 
 .tick { color:green;
-		font-size: 4.0em;
+		font-size: 1em;
 		margin:0 auto;
+
 		} 
-
-tr.tick	td p { margin:0;
-			   margin-right: 1em; }	
-
 .cross { color:red;
-		font-size: 4.0em;
+		font-size: 1em;
 		margin:0 auto;
 		} 
-		
-tr.cross td p { margin:0;
-				margin-right: 1em;
-				text-decoration: line-through; }	
 
-.total  {  text-align: right;
+
+.total  {  text-align: center;
+			margin:0 auto;
 			font-size:3em;
+			padding: 1em;
 			 font-family: arial;}				
 
 
@@ -115,6 +113,4 @@ footer { font-size: 3em;
 
 		 text-align: center;
 		 margin-top: 10em;}		
-
-
 
