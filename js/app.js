@@ -1,35 +1,45 @@
 
-
 /*Check on List and  Prompt them for the price*/
 
 $(document).ready(function() {
-
-
 
 });
 	
 
 
 
+/* Mar item as in store and get price*/
 
 var price= 0;
 var total=0;
-	
 
 
 $(document).on("click", ".checkButton", function(){
 	
     	   
     $(this).parent().removeClass( "cross" ).addClass( "tick");
-	price= parseInt(prompt('what price?'));
+		
+		price= parseFloat(prompt('what price?'));
+		
+		while ( isNaN(price)) {
+			
+			price= parseFloat(prompt('Please enter a number in £s?'))
+		
+		};
+
+		
+
 	$(this).parent().append( '  ' +  '£' + price);
+		
 
 	total += price;
-	
+			
 	console.log(total);
 	$('.total').text('Total Cost £:'+ total);
 	return total;
 
+
+	
 	
 });
 
@@ -41,6 +51,7 @@ $(document).on("click", ".checkButton", function(){
 
 $(document).on('click', '.removeButton', function(){
 	$(this).parent().remove();
+	
 });
 
 /*Un check from list */
@@ -65,7 +76,7 @@ $(document).ready(function() {
 		    
 		    if (e.keyCode == 13) {
 
-		     		 $(".on-the-list ul").append('<li>' + itemName + ' '+ checkButton + uncheckButton  + removeButton + '</li>')
+		     		 $(".on-the-list ul").prepend('<li>' + itemName + ' '+ checkButton + uncheckButton  + removeButton + '</li>')
 		     	   	 $('input').val("");
 
 		 	}			 	
