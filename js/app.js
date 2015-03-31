@@ -2,10 +2,6 @@
 
 /*Check on List and  Prompt them for the price*/
 
-$(document).ready(function() {
-
-});
-	
 
 
 
@@ -15,16 +11,18 @@ var price= 0;
 var total=0;
 
 
+
+
 $(document).on("click", ".checkButton", function(){
 	
     	   
     $(this).parent().removeClass( "cross" ).addClass( "tick");
 		
-		price= parseInt(prompt('what price?'));
+		price= parseFloat(prompt('what price?'));
 		
 		while ( isNaN(price)) {
 			
-			price= parseInt(prompt('Please enter a number in £s?'))
+			price= parseFloat(prompt('Please enter a number in £s?'))
 		
 		};
 
@@ -34,18 +32,16 @@ $(document).on("click", ".checkButton", function(){
 		
 
 	total += price;
-			
-	console.log(total);
+	
 	$('.total').text('Total Cost £:'+ total);
+	
+	console.log(total);
+	
 	return total;
 
 
-	
-	
+		
 });
-
-
-
 
 
 /*Remove item from list */
@@ -53,19 +49,31 @@ $(document).on("click", ".checkButton", function(){
 $(document).on('click', '.removeButton', function(){
 	$(this).parent().remove();
 	
+	total -= price;
+
+	$('.total').text('Total Cost £:'+ total);
+	
+	console.log(price);
+	console.log(total);
+
+	return total;
+
 });
+
+
+
 
 /*Un check from list */
 
 $(document).on('click','.uncheckButton', function() {
 	$(this).parent().removeClass('tick').addClass('cross');
-}) 
+}); 
 
 
-$(document).ready(function() {
+
 
 // Add Item to List ///
-
+$(document).ready(function() {
 
 
 	$( "input" ).keydown(function(e) {
@@ -85,6 +93,9 @@ $(document).ready(function() {
 
 });
 
+
+
+	
 
 
 
