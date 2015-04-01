@@ -28,7 +28,7 @@ $(document).on("click", ".checkButton", function(){
 
 		
 
-	$(this).parent().append( '  ' +  '£' + price);
+	$(this).parent().append( '  ' +  '£' + "<span class='editPrice'>" + price + "</span>");
 		
 
 	total += price;
@@ -46,21 +46,27 @@ $(document).on("click", ".checkButton", function(){
 
 /*Remove item from list */
 
+
 $(document).on('click', '.removeButton', function(){
-	$(this).parent().remove();
-	
-	total -= price;
 
-	$('.total').text('Total Cost £:'+ total);
-	
-	console.log(price);
-	console.log(total);
 
-	return total;
+		var dummy= $(this).siblings('.editPrice')
+
+		$(this).parent().remove();
+
+		
+	 	price =parseFloat(dummy[0].innerText);
+
+	
+		total -= price;
+
+		$('.total').text('Total Cost £:'+ total);
+	
+		return total;
+
+
 
 });
-
-
 
 
 /*Un check from list */
@@ -94,12 +100,3 @@ $(document).ready(function() {
 });
 
 
-
-	
-
-
-
-      /*  console.log("I am going to add a strikethrough");
-        $(this).closest('p').addClass("strikethrough");
-        $(this).siblings('.delete').addClass("alt-delete");
-        $(this).addClass("alt-cross-off");*/
