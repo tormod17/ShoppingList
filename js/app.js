@@ -1,50 +1,41 @@
-
-
-/*Check on List and  Prompt them for the price*/
-
-
-
-
-/* Mar item as in store and get price*/
+/* check item is in store and get price*/
 
 var price= 0;
 var total=0;
 
 
-
-
 $(document).on("click", ".checkButton", function(){
 	
     	   
-    $(this).parent().removeClass( "cross" ).addClass( "tick");
+    $(this).parent().removeClass( "cross" ).addClass( "tick");  
 		
-		price= parseFloat(prompt('what price?'));
+		price= parseFloat(prompt('what price?'));   /* get input price from user*/
 		
-		while ( isNaN(price)) {
+		while ( isNaN(price)) {                /*   while input isn't a number ask for a number in £'s*/
 			
 			price= parseFloat(prompt('Please enter a number in £s?'))
 		
 		};
 
 		
-
-	$(this).parent().append( '  ' +  '£' + "<span class='editPrice'>" + price + "</span>");
+	$(this).parent().append( '  ' +  '£' + price);  /*add price to list row */
 		
 
 	total += price;
-	
+			
 	$('.total').text('Total Cost £:'+ total);
-	
-	console.log(total);
-	
 	return total;
 
 
-		
+	
+	
 });
 
 
-/*Remove item from list */
+
+
+
+/*Remove item from list *********************/
 
 
 $(document).on('click', '.removeButton', function(){
@@ -69,18 +60,17 @@ $(document).on('click', '.removeButton', function(){
 });
 
 
-/*Un check from list */
+/************Un-check from list *************/
 
 $(document).on('click','.uncheckButton', function() {
 	$(this).parent().removeClass('tick').addClass('cross');
-}); 
+}) 
 
 
 
+/*/ **************Add Item to List ****************/
 
-// Add Item to List ///
 $(document).ready(function() {
-
 
 	$( "input" ).keydown(function(e) {
 
@@ -100,3 +90,6 @@ $(document).ready(function() {
 });
 
 
+
+
+   
