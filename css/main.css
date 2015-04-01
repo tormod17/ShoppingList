@@ -2,20 +2,16 @@
 body { 
 
  background-image: url(http://i1378.photobucket.com/albums/ah112/Tormod_Smith/notePad_zpsw60k6o4s.jpg);
-/*   background-image: url(http://i1378.photobucket.com/albums/ah112/Tormod_Smith/Mobile%20Uploads/notepaper_zpsc0zohhlm.jpg); */  
-  background-size: cover; 
-  background-attachment: fixed;
-  background-position:center;
-  background-repeat: no-repeat;
+ background-size: cover; 
+ background-attachment: fixed;
+ background-position:center;
+ background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
 
   font-family: 'Indie Flower', cursive;
   font:bolder;
 
-/* background-image: url(file://C:/Users/Tormod/Documents/Thinkful/ShoppingList/img/notePad.jpg);
-background-image: no-repeat;
-} */
 }
 
 html {
@@ -32,37 +28,36 @@ h4 { font-size: 4em;}
 /************Header **********************/
 
 header { margin: 0 auto;
-
-		 
-		 font-size: 4em;
-		 text-align: center;
-		 line-height: 0.3em}
-
-header p h2 { margin-top: 1em;
-			}		 
+	 	 text-align: center;
+				}		 
 
 
+	
 
-/****************Input **********************/
+
+/****************Input  Box**********************/
 
 .input-wrapper, .main-wrapper { background-color: rgba(0,0,3,0.1); }
 
 .input-wrapper { 	
-
+			display: inline-block;
 			font-size: 3em;
-			margin: 0 auto;
+			margin: 1em auto;
+			padding: 1em;
 			text-align: center;
 			width:90%;}
 
 
 .total  {  text-align: center;
-			margin:0 auto;
+		    margin:0 auto;
 			font-size:1em;
 			padding: 0em;
-			 font-family: arial;}	
+			font-family: arial;}	
 
-.input-wrapper h2 {margin:0;
-					font-size: 2em;}
+.input-wrapper h3 { display: inline-block;
+					margin:0 auto;
+				}
+
 
 input { text-align: center;
 		background-color: rgba(0,2,3,0.1);
@@ -70,7 +65,7 @@ input { text-align: center;
 		}			
 
 
-/************ Table *******************/ 
+/************ List *******************/ 
 
 .main-wrapper { width:90%;
 				margin:0 auto;
@@ -95,6 +90,7 @@ input { text-align: center;
 				position: relative;
 				list-style: none;
 			}				
+
 .on-the-list ul { margin:0;
 				  padding:0;
 				  list-style: none;}
@@ -103,8 +99,8 @@ input { text-align: center;
 .tick { color:green;
 		font-size: 1em;
 		margin:0 auto;
-
 		} 
+
 .cross { color:red;
 		font-size: 1em;
 		margin:0 auto;
@@ -122,8 +118,9 @@ input { text-align: center;
 				  color: grey;
 	
 }
+
 .instructions li p { display: inline-block;
-						margin-left: 1em;}
+					 margin-left: 1em;}
 
 /************ Footer ***********/
 

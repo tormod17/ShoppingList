@@ -1,14 +1,6 @@
 
-/*Check on List and  Prompt them for the price*/
 
-$(document).ready(function() {
-
-});
-	
-
-
-
-/* Mar item as in store and get price*/
+/* check item is in store and get price*/
 
 var price= 0;
 var total=0;
@@ -17,24 +9,22 @@ var total=0;
 $(document).on("click", ".checkButton", function(){
 	
     	   
-    $(this).parent().removeClass( "cross" ).addClass( "tick");
+    $(this).parent().removeClass( "cross" ).addClass( "tick");  
 		
-		price= parseFloat(prompt('what price?'));
+		price= parseFloat(prompt('what price?'));   /* get input price from user*/
 		
-		while ( isNaN(price)) {
+		while ( isNaN(price)) {                /*   while input isn't a number ask for a number in £'s*/
 			
 			price= parseFloat(prompt('Please enter a number in £s?'))
 		
 		};
 
 		
-
-	$(this).parent().append( '  ' +  '£' + price);
+	$(this).parent().append( '  ' +  '£' + price);  /*add price to list row */
 		
 
 	total += price;
 			
-	console.log(total);
 	$('.total').text('Total Cost £:'+ total);
 	return total;
 
@@ -47,25 +37,42 @@ $(document).on("click", ".checkButton", function(){
 
 
 
-/*Remove item from list */
+/*Remove item from list *********************/
+
 
 $(document).on('click', '.removeButton', function(){
-	$(this).parent().remove();
+
+
+		var dummy= $(this).siblings('.editPrice')
+
+		$(this).parent().remove();
+
+		
+	 	price =parseFloat(dummy[0].innerText);
+
 	
+		total -= price;
+
+		$('.total').text('Total Cost £:'+ total);
+	
+		return total;
+
+
+
 });
 
-/*Un check from list */
+
+/************Un-check from list *************/
 
 $(document).on('click','.uncheckButton', function() {
 	$(this).parent().removeClass('tick').addClass('cross');
 }) 
 
 
+
+/*/ **************Add Item to List ****************/
+
 $(document).ready(function() {
-
-// Add Item to List ///
-
-
 
 	$( "input" ).keydown(function(e) {
 
@@ -87,7 +94,4 @@ $(document).ready(function() {
 
 
 
-      /*  console.log("I am going to add a strikethrough");
-        $(this).closest('p').addClass("strikethrough");
-        $(this).siblings('.delete').addClass("alt-delete");
-        $(this).addClass("alt-cross-off");*/
+   
