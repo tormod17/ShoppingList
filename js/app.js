@@ -18,12 +18,12 @@ $(document).on("click", ".checkButton", function(){
 		};
 
 		
-	$(this).parent().append( '  ' +  '£' + price);  /*add price to list row */
+	$(this).parent().append( '  ' +  '£' + "<span class='editPrice'>" + price + "</span>");  /*add price to list row */
 		
 
 	total += price;
 			
-	$('.total').text('Total Cost £:'+ total);
+	$('.total').text('Total Cost £ '+ total);
 	return total;
 
 
